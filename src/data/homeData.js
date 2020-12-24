@@ -56,7 +56,7 @@ exports.users = [
   {
     key: '2',
     userImage: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjV8fHBlcnNvbnxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    userName: 'Garder',
+    userName: 'Gustavo',
     transactionDate: '30/11/2020',
     amount: '$1,000',
     credit: false
@@ -74,8 +74,24 @@ exports.users = [
     userImage: 'https://images.unsplash.com/photo-1598958978605-e8f58be35e17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTI1fHxwZXJzb258ZW58MHwyfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     userName: 'Arturo',
     transactionDate: '29/10/2020',
-    amount: '$500',
-    credit: false
+    amount: '$80',
+    credit: true
+  },
+  {
+    key: '6',
+    userImage: 'https://images.unsplash.com/photo-1500048993953-d23a436266cf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlcnNvbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    userName: 'Enrique',
+    transactionDate: '17/10/2020',
+    amount: '$120',
+    credit: true
+  },
+  {
+    key: '7',
+    userImage: 'https://images.unsplash.com/photo-1592173819500-c3ae8042ae1e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzAxfHxwZXJzb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    userName: 'Fátima',
+    transactionDate: '13/10/2020',
+    amount: '$200',
+    credit: true
   },
   
 ]

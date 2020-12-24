@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   nameTxt: {
     fontSize: 22,
     color: "#fff",
-    opacity: 0.6,
+    opacity: 0.5,
   },
   profileImgNotification: {
     height: 12,

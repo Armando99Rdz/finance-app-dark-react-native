@@ -63,6 +63,7 @@ export default () => {
         contentContainerCustomStyle={{
           paddingTop: 14,
         }}
+        loop={true}
       />
     </View>
   )

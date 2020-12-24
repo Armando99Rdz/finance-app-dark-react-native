@@ -44,16 +44,17 @@ export default () => {
 
           <View style={styles.panelListContainer}>
             <FlatList
+              showsVerticalScrollIndicator={false}
               data={users}
               keyExtractor={item => item.key}
               renderItem={({ item }) => (
                 <View style={styles.panelItemContainer}>
-                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                  <View style={styles.userPanelInfoItem}>
                     <View style={{ marginRight: 10 }}>
                       <Image source={{ uri: item.userImage }} style={styles.panelItemImg} />
                     </View>
                     <View>
-                      <Text style={{ fontSize: 14, color: "#fff" }}>
+                      <Text style={{ fontSize: 16, color: "#fff" }}>
                         {item.userName}
                       </Text>
                       <Text style={{ fontSize: 11, color: "#fff" }}>
@@ -61,8 +62,8 @@ export default () => {
                       </Text>
                     </View>
                   </View>
-                  <View>
-                      <Text style={{ fontSize: 16, color: "#fff", flex:1}}>{item.amount}</Text>
+                  <View style={styles.amountItemContainer}>
+                      <Text style={styles.amountItem}>{item.amount}</Text>
                       {item.credit ? (
                         <Icon name="ios-caret-up" size={16} color={"green"} />
                       ): (
@@ -72,6 +73,11 @@ export default () => {
                 </View>
               )}
             />
+          </View>
+          <View style={styles.footerContainer}>
+            <TouchableOpacity style={styles.panelButton}>
+              <Text style={styles.panelButtonText}>Historial Completo</Text>
+            </TouchableOpacity>
           </View>
 
         </View>
@@ -102,22 +108,55 @@ const styles = StyleSheet.create({
     color: "#fff",
     marginVertical: 16,
     fontSize: 16,
+    paddingTop: 10,
   },
   panelListContainer: {
     height: 500,
-    paddingBottom: 10,
+    paddingBottom: 15,
   },
   panelItemContainer: {
     borderWidth: 0.6,
     borderColor: "#333333",
     padding: 14,
     borderRadius: 6,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     marginBottom: 20,
   },
   panelItemImg: {
-    width: 30,
-    height: 30,
+    width: 32,
+    height: 32,
     backgroundColor: "#000",
     borderRadius: 40,
+  },
+  userPanelInfoItem: {
+    flexDirection: 'row', 
+    alignItems: 'center',
+  },
+  amountItem: {
+    fontSize: 16, 
+    color: "#fff",
+    marginHorizontal: 5,
+  },
+  amountItemContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  footerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end'
+  },
+  panelButton: {
+    padding: 14,
+    justifyContent: 'center',
+    backgroundColor: '#333333',
+    borderRadius: 10,
+    width: 200,
+  },
+  panelButtonText: {
+    fontSize: 16,
+    color: "#fff",
+    alignSelf: 'center',
   }
 })
